@@ -4,8 +4,8 @@ A software that tracks the amount of time user runs applications on a linux runn
 
 # Copyright Notice
 
-linuxtrackr, Copyright(c) 2019, Cem Önder
+proctorX, Copyright(c) 2019, Cem Önder
 
 # Build Instructions
 
-Currently Not Available (Check back in couple weeks)
+Currently In Development Mode (Check back in couple weeks)
