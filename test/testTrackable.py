@@ -21,7 +21,7 @@ class testTrackable(unittest.TestCase):
         testTrackable = trackable("testTrackable", 0.0)
         testTrackable.setForUpdate()
         self.assertEquals(testTrackable.getIsTracked(), False)
-        self.assertNotEquals(testTrackable.getTotalSecond(), 0.0)    
+        self.assertNotEqual(testTrackable.getTotalSecond(), 0.0)    
 
     def testResetTotalSecond(self):
         testTrackable = trackable("testTrackable", 0.0)
