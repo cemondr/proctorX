@@ -30,7 +30,6 @@ kdevtmpfs
 netns
 rcu_tasks_kthre
 kauditd
-kworker/0:1
 kworker/1:1
 kworker/2:1
 khungtaskd
@@ -208,21 +207,26 @@ code
 mintUpdate
 nemo
 update-notifier
-xed
 cupsd
 cups-browsed
 firefox
 Web Content
 WebExtensions
-Web Content
 kworker/0:0
 dbus-launch
 dbus-daemon
 kworker/u8:2
 kworker/2:0
-Web Content
+sd_generic
+sd_espeak-ng
+sd_dummy
+speech-dispatch
 Web Content
 kworker/u8:1
+kworker/0:2
+Web Content
+Web Content
+xed
 kworker/u8:0
 python3
 sh
