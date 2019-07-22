@@ -1,4 +1,4 @@
-from src.fileIO import fileInputOutput
+from fileIO import fileInputOutput
 import time
 import os 
 
