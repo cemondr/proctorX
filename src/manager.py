@@ -69,6 +69,7 @@ class manager:
 
     #** initiate the call to the recorder by putting it to the thread
     def startrecording(self):
+        print("I am recording...")
         if(self.__myRecorder.isOn() is False):
             for app in self.__toBeTracked: 
                 app.setForTrack()
@@ -78,6 +79,7 @@ class manager:
 
     #** Stop the recording 
     def stoprecording(self):
+        print("I stopped...")
         if(self.__myRecorder.isOn() is True):
             for app in self.__toBeTracked:
                 self.__myReader.getProcesses()
