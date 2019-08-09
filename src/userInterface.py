@@ -5,9 +5,11 @@ from PyQt5.QtCore import *
 from PyQt5 import QtCore
 from manager import manager
 from fileIO import fileInputOutput
+from visualizer import trackDataVisualizer
 
 programManager = manager("logs/currentProcesses.txt", "logs/currentTrackedData.txt")
 myReader = fileInputOutput("logs/currentProcesses.txt", "logs/currentTrackedData.txt")
+myVisualizer = trackDataVisualizer()
 
 
 class Window(QDialog):
@@ -32,18 +34,19 @@ class Window(QDialog):
 
     def mainLayout(self):
 
+        self.isRunning = False
         self.groupBox = QGroupBox("Main Options")
         #self.groupBox.setStyleSheet("border: black;")
         hboxlayout = QHBoxLayout()
 
-        runButton = QPushButton("Start",self)
+        self.runButton = QPushButton("Start",self)
         #runButton.setGeometry(QRect(100,100,150,150))
-        runButton.setIcon(QtGui.QIcon("icons/play2.png"))
-        runButton.setStyleSheet("color: white;")
-        runButton.setIconSize(QtCore.QSize(40,40))
-        runButton.setMinimumHeight(40)
-        runButton.clicked.connect(programManager.startrecording)
-        hboxlayout.addWidget(runButton)
+        self.runButton.setIcon(QtGui.QIcon("icons/play2.png"))
+        self.runButton.setStyleSheet("color: white;")
+        self.runButton.setIconSize(QtCore.QSize(40,40))
+        self.runButton.setMinimumHeight(40)
+        self.runButton.clicked.connect(self.callStart)
+        hboxlayout.addWidget(self.runButton)
 
         stopButton = QPushButton("Stop",self)
         #stopButton.setGeometry(QRect(100,100,150,150))
@@ -51,7 +54,7 @@ class Window(QDialog):
         stopButton.setStyleSheet("color: white;")
         stopButton.setIconSize(QtCore.QSize(20,25))
         stopButton.setMinimumHeight(40)
-        stopButton.clicked.connect(programManager.stoprecording)
+        stopButton.clicked.connect(self.callStop)
         hboxlayout.addWidget(stopButton)
 
         trackedButton = QPushButton("Tracked",self)
@@ -69,6 +72,7 @@ class Window(QDialog):
         dataButton.setStyleSheet("color: white;")
         dataButton.setIconSize(QtCore.QSize(40,40))
         dataButton.setMinimumHeight(40)
+        dataButton.clicked.connect(self.moveToVisualize)
         hboxlayout.addWidget(dataButton)
 
         self.groupBox.setLayout(hboxlayout)
@@ -76,6 +80,22 @@ class Window(QDialog):
     def moveToTracked(self):
         self.close()
         self.tracked = TrackedWindow()
+    
+    def moveToVisualize(self):
+        self.close()
+        self.visualized = visualizer()
+    
+    def callStart(self):
+        self.runButton.setIcon(QtGui.QIcon("icons/redot.JPG"))
+        QApplication.processEvents()
+        programManager.startrecording()
+        self.isRunning = True
+    
+    def callStop(self):
+        programManager.stoprecording()
+        self.runButton.setIcon(QtGui.QIcon("icons/play2.png"))
+        QApplication.processEvents()
+        
     
 class TrackedWindow(QWidget):
     def __init__(self):
@@ -237,7 +257,127 @@ class TrackedWindow(QWidget):
     def goBackHome(self):
         self.close()
         self.home = Window()
+
+class visualizer (QWidget):
+    def __init__(self):
+        super().__init__()
+        self.title = "ProctorX"
+        self.top = 100
+        self.left = 200
+        self.width = 350
+        self.height = 550
+
+        self.setWindowTitle(self.title)
+        self.setWindowIcon(QtGui.QIcon("icons/fs.png"))
+        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setStyleSheet("background-color: black;")
+
+        self.mainLayout()
+        #vbox = QVBoxLayout()
+        #vbox.addWidget(self.groupBox)
+        #self.setLayout(vbox)
+        self.show()
     
+    def mainLayout(self):
+        index = 0
+        self.allcheckboxes =[]
+        self.groupBox = QGroupBox("Pick For Plot")
+        self.groupBox.setFont(QtGui.QFont("Courier"))
+        vboxlayout = QVBoxLayout()
+        vboxlayout2 = QVBoxLayout()
+        hboxlayout = QHBoxLayout()
+        hboxlayout2 = QHBoxLayout()
+        self.displayLayout = QGridLayout()
+
+        currentData = myReader.getAllTrackedLines()
+        dataSize = len(currentData)
+
+        for piece in currentData:
+            pieceArray = piece.split("|")
+            temp = QCheckBox(pieceArray[1])
+            temp.setStyleSheet("spacing:2px;")
+            temp.setStyleSheet("padding-top:100;")
+            temp.setIcon(QtGui.QIcon("icons/fs.png"))
+            temp.setStyleSheet("color:mediumvioletred;")
+            temp.setIconSize(QtCore.QSize(10,10))
+            self.allcheckboxes.append(temp)
+
+            if(index % 2 == 0):
+                vboxlayout.addWidget(temp)
+            else:
+                vboxlayout2.addWidget(temp)
+            
+            index = index +1
+        
+        hboxlayout.addLayout(vboxlayout)
+        hboxlayout.addLayout(vboxlayout2)
+
+        self.groupBox.setLayout(hboxlayout)
+
+
+        pieButton= QPushButton("Show As Pie",self)
+        pieButton.setStyleSheet("color:white;")
+        pieButton.clicked.connect(self.callMakePie)
+        hboxlayout2.addWidget(pieButton)
+
+        barButton = QPushButton("Show As Bar",self)
+        barButton.setStyleSheet("color:white;")
+        barButton.clicked.connect(self.callMakeChart)
+        hboxlayout2.addWidget(barButton)
+
+        self.groupBox2 = QGroupBox()
+        somevbox = QVBoxLayout()
+        somevbox.addLayout(hboxlayout2)
+
+        dataButton = QPushButton("Home",self)
+        dataButton.setIcon(QtGui.QIcon("icons/data.jpg"))
+        dataButton.setStyleSheet("color: white;")
+        dataButton.setIconSize(QtCore.QSize(30,35))
+        dataButton.clicked.connect(self.goBackHome)
+        dataButton.setMinimumHeight(40)
+        anotherhbox = QHBoxLayout()
+        anotherhbox.addWidget(dataButton)
+        somevbox.addLayout(anotherhbox)
+
+        self.groupBox2.setLayout(somevbox)
+
+
+        
+        self.displayLayout.addWidget(self.groupBox)
+        self.displayLayout.addWidget(self.groupBox2)
+
+        self.setLayout(self.displayLayout)
+
+    def getCheckedBoxNames(self, boxList):
+        nameList = []
+        for box in boxList:
+            if box.isChecked():
+                nameList.append(box.text())
+        
+        return nameList
+    
+    def callMakePie(self):
+        nameList = self.getCheckedBoxNames(self.allcheckboxes)
+        myVisualizer.makeSomePie(nameList)
+    
+    def callMakeChart(self):
+        nameList = self.getCheckedBoxNames(self.allcheckboxes)
+        myVisualizer.makeSomeBar(nameList)
+    
+    def goBackHome(self):
+        self.close()
+        self.home = Window()
+
+    
+
+    
+
+
+
+
+        
+    
+
 
 
 
