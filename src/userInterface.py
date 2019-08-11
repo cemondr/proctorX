@@ -217,13 +217,14 @@ class TrackedWindow(QWidget):
     def mainLayout(self):
 
         self.switchBox=QGroupBox()
+        self.switchBox.setStyleSheet("border: 1px solid black;")
         self.switchHorizontal = QHBoxLayout()
-        self.dataViewButton =QPushButton("Tracked")
-        self.dataViewButton.setStyleSheet("color white;")
-        self.dataViewButton.setIcon(QtGui.QIcon("icons/redot.jpg"))
+        self.dataViewButton= QPushButton("Tracked")
+        self.dataViewButton.setStyleSheet("color:white;")
+        self.dataViewButton.setIcon(QtGui.QIcon("icons/redot.JPG"))
         
         self.processViewButton = QPushButton("Processes")
-        self.processViewButton.setStyleSheet("color white;")
+        self.processViewButton.setStyleSheet("color:white;")
         self.processViewButton.setIcon(QtGui.QIcon("icons/target.jpg"))
         self.processViewButton.clicked.connect(self.pushProcesses)
 
@@ -249,11 +250,11 @@ class TrackedWindow(QWidget):
         self.firstTexter()
         self.DisplayGroup.setLayout(self.hboxlayout)
         self.groupBox.addWidget(self.DisplayGroup)
-        self.groupBox.setSpacing(10)
         
 
         self.editable = QLineEdit()
         self.editable.setStyleSheet("color: green;")
+        self.editable.setStyleSheet("border: 1px solid white;")
         editableLayout = QHBoxLayout()
         editableLayout.addWidget(self.editable)
         vboxlayout.addLayout(editableLayout)
@@ -281,6 +282,7 @@ class TrackedWindow(QWidget):
         hboxlayout2.addWidget(resetDataButton)
 
         self.EditGroup.setLayout(vboxlayout)
+        self.EditGroup.setStyleSheet("border: 1px solid black;")
         self.groupBox.addWidget(self.EditGroup)
 
         dataButton = QPushButton("Home",self)
@@ -400,10 +402,13 @@ class visualizer (QWidget):
         dataButton.clicked.connect(self.goBackHome)
         dataButton.setMinimumHeight(40)
         homeButtonHorizontal.addWidget(dataButton)
+        QApplication.setStyle('cleanlooks')
+
 
         allButtonsVertical.addLayout(dataButtonsHorizontal)
         allButtonsVertical.addLayout(homeButtonHorizontal)
         self.buttonsScreen.setLayout(allButtonsVertical)
+        self.buttonsScreen.setStyleSheet("border: 1px solid black")
     
 
     
