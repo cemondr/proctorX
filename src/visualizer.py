@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib.colors as pltcol
+import datetime
 from fileIO import fileInputOutput
 import numpy as np
 
@@ -51,11 +52,15 @@ class trackDataVisualizer:
         self.primeForSomeData(userList)
         plt.ion()
         plt.style.use('dark_background')
+        dateStr = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        plt.text(0.07, 1.05,dateStr,fontsize=14, transform=plt.gcf().transFigure)
 
         all_colors = [k for k,v in pltcol.cnames.items()]
         print("LABEL SIZE: "+ str(len(self.__labels)))
         print("DATA SIZE: " + str(len(self.__trackData)))
-        plt.pie(self.__trackData, labels = self.__labels, colors= all_colors ,shadow = False, autopct = '%1.1f%%')  
+        plt.pie(self.__trackData, labels = self.__labels, colors= all_colors ,shadow = False, autopct = '%1.1f%%',textprops={'color': 'b'})  
+        plt.text(0.07, 0.05,dateStr,fontsize=14, transform=plt.gcf().transFigure)
+
         plt.axis('equal')
         plt.show() 
     
@@ -70,7 +75,9 @@ class trackDataVisualizer:
                 data.append(self.__trackData[i])
         
         
-        plt.pie(data, labels = label, colors= all_colors ,shadow = False, autopct = '%1.1f%%')  
+        plt.pie(data, labels = label, colors= all_colors ,shadow = False, autopct = '%1.1f%%', ) 
+     
+ 
         plt.axis('equal')
         plt.show() 
     
@@ -81,7 +88,9 @@ class trackDataVisualizer:
         y_pos = np.arange(len(self.__trackData))
         plt.bar(y_pos, self.__trackData)
         plt.xticks(y_pos, self.__labels)
-        plt.title('Time Ran in Seconds')
+        dateStr = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        plt.title('Time Ran in Seconds on: ' + dateStr)
+
         plt.show()
 
         

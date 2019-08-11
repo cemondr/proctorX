@@ -36,6 +36,13 @@ class fileInputOutput:
     def overWriteTrackedLines(self,fullData):
         with open(self.__trackFilePath, "w")as myfile:
             myfile.writelines(fullData)
+    
+    def getAllProcesses(self):
+        with open (self.__processFilePath, "r")as myfile:
+            processes = myfile.readlines()
+        
+        return processes
+
 
 
 myReader = fileInputOutput("logs/currentProcesses.txt", "logs/currentData.txt")

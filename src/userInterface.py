@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import * 
 import sys
+import os
 from PyQt5 import QtGui
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
@@ -149,22 +150,41 @@ class TrackedWindow(QWidget):
         self.displayBox2.setText(dataTrack)
 
         QApplication.processEvents()
+    
+    def pushProcesses(self):
+        
+        self.displayProcess = QTextEdit()
+        self.displayProcess.setReadOnly(True)
+        
+        thelist = myReader.getAllProcesses()
+        oneString = ""
+        for x in thelist:
+            oneString = oneString + x
 
-    def mainLayout(self):
+        self.displayProcess.setText(oneString)
+        self.displayProcess.setFont(self.font)
+        self.displayProcess.setStyleSheet("color:green;")
+       
 
-        hboxlayout2 = QHBoxLayout()
-        vboxlayout = QVBoxLayout()
-
-        self.groupBox = QGridLayout()
-        self.groupBox.setSpacing(10)
-        #self.groupBox.setStyleSheet("border: black;")
-
+        self.hboxlayout.takeAt(0)
+        self.hboxlayout.takeAt(0)
+        self.hboxlayout.takeAt(0)
+        self.hboxlayout.addWidget(self.displayProcess)
+        self.dataViewButton.clicked.connect(self.pushBackTrackList)
 
 
-        self.DisplayGroup = QGroupBox()
-        self.EditGroup = QGroupBox()
+ 
+        self.processViewButton.setIcon(QtGui.QIcon("icons/redot.jpg"))
+        self.dataViewButton.setIcon(QtGui.QIcon("icons/target.jpg"))
+        QApplication.processEvents()
+    
+
+    def pushBackTrackList(self):
+        self.close()
+        self.tracked = TrackedWindow()
+
+    def firstTexter(self):
         self.hboxlayout = QHBoxLayout()
-
         self.font = QtGui.QFont()
         self.font.setFamily("Courier")
 
@@ -194,6 +214,39 @@ class TrackedWindow(QWidget):
         self.displayBox2.setReadOnly(True)
         self.hboxlayout.addWidget(self.displayBox2)
 
+    def mainLayout(self):
+
+        self.switchBox=QGroupBox()
+        self.switchHorizontal = QHBoxLayout()
+        self.dataViewButton =QPushButton("Tracked")
+        self.dataViewButton.setStyleSheet("color white;")
+        self.dataViewButton.setIcon(QtGui.QIcon("icons/redot.jpg"))
+        
+        self.processViewButton = QPushButton("Processes")
+        self.processViewButton.setStyleSheet("color white;")
+        self.processViewButton.setIcon(QtGui.QIcon("icons/target.jpg"))
+        self.processViewButton.clicked.connect(self.pushProcesses)
+
+        self.switchHorizontal.addWidget(self.dataViewButton)
+        self.switchHorizontal.addWidget(self.processViewButton)
+
+        self.switchBox.setLayout(self.switchHorizontal)
+
+
+        hboxlayout2 = QHBoxLayout()
+        vboxlayout = QVBoxLayout()
+
+        self.groupBox = QGridLayout()
+        self.groupBox.setSpacing(10)
+        self.groupBox.addWidget(self.switchBox)
+
+
+
+        self.DisplayGroup = QGroupBox()
+        self.EditGroup = QGroupBox()
+        
+        
+        self.firstTexter()
         self.DisplayGroup.setLayout(self.hboxlayout)
         self.groupBox.addWidget(self.DisplayGroup)
         self.groupBox.setSpacing(10)
@@ -221,6 +274,11 @@ class TrackedWindow(QWidget):
         unTrackButton.clicked.connect(self.reSetScreen)
         hboxlayout2.addWidget(unTrackButton)
         vboxlayout.addLayout(hboxlayout2)
+        resetDataButton = QPushButton("Reset")
+        resetDataButton.setStyleSheet("color: white;")
+        resetDataButton.clicked.connect(self.callResetData)
+        resetDataButton.clicked.connect(self.reSetScreen)
+        hboxlayout2.addWidget(resetDataButton)
 
         self.EditGroup.setLayout(vboxlayout)
         self.groupBox.addWidget(self.EditGroup)
@@ -246,6 +304,10 @@ class TrackedWindow(QWidget):
         arg = self.editable.text()
         programManager.addNewTrackable(arg)
     
+    def callResetData(self):
+        arg = self.editable.text()
+        programManager.resetData(arg)
+
     def callTrack(self):
         arg = self.editable.text()
         programManager.setTrackable(arg)
@@ -281,13 +343,18 @@ class visualizer (QWidget):
     def mainLayout(self):
         index = 0
         self.allcheckboxes =[]
-        self.groupBox = QGroupBox("Pick For Plot")
-        self.groupBox.setFont(QtGui.QFont("Courier"))
-        vboxlayout = QVBoxLayout()
-        vboxlayout2 = QVBoxLayout()
-        hboxlayout = QHBoxLayout()
-        hboxlayout2 = QHBoxLayout()
-        self.displayLayout = QGridLayout()
+        self.checkBoxScreen = QGroupBox()
+        checkBoxVertical1 = QVBoxLayout()
+        checkBoxVertical2 = QVBoxLayout()
+        checkBoxHorizontalView = QHBoxLayout()
+
+
+        self.buttonsScreen = QGroupBox()
+        dataButtonsHorizontal = QHBoxLayout()
+        homeButtonHorizontal = QHBoxLayout()
+        allButtonsVertical =QVBoxLayout()
+
+        self.pageLayout = QGridLayout()
 
         currentData = myReader.getAllTrackedLines()
         dataSize = len(currentData)
@@ -297,37 +364,34 @@ class visualizer (QWidget):
             temp = QCheckBox(pieceArray[1])
             temp.setStyleSheet("spacing:2px;")
             temp.setStyleSheet("padding-top:100;")
-            temp.setIcon(QtGui.QIcon("icons/fs.png"))
+            temp.setIcon(QtGui.QIcon("icons/bal.jpg"))
             temp.setStyleSheet("color:mediumvioletred;")
             temp.setIconSize(QtCore.QSize(10,10))
             self.allcheckboxes.append(temp)
 
             if(index % 2 == 0):
-                vboxlayout.addWidget(temp)
+                checkBoxVertical1.addWidget(temp)
             else:
-                vboxlayout2.addWidget(temp)
+                checkBoxVertical2.addWidget(temp)
             
             index = index +1
         
-        hboxlayout.addLayout(vboxlayout)
-        hboxlayout.addLayout(vboxlayout2)
+        checkBoxHorizontalView.addLayout(checkBoxVertical1)
+        checkBoxHorizontalView.addLayout(checkBoxVertical2)
 
-        self.groupBox.setLayout(hboxlayout)
+        self.checkBoxScreen.setLayout(checkBoxHorizontalView)
 
-
+        
         pieButton= QPushButton("Show As Pie",self)
         pieButton.setStyleSheet("color:white;")
         pieButton.clicked.connect(self.callMakePie)
-        hboxlayout2.addWidget(pieButton)
+        dataButtonsHorizontal.addWidget(pieButton)
 
         barButton = QPushButton("Show As Bar",self)
         barButton.setStyleSheet("color:white;")
         barButton.clicked.connect(self.callMakeChart)
-        hboxlayout2.addWidget(barButton)
-
-        self.groupBox2 = QGroupBox()
-        somevbox = QVBoxLayout()
-        somevbox.addLayout(hboxlayout2)
+        dataButtonsHorizontal.addWidget(barButton)
+            
 
         dataButton = QPushButton("Home",self)
         dataButton.setIcon(QtGui.QIcon("icons/data.jpg"))
@@ -335,18 +399,18 @@ class visualizer (QWidget):
         dataButton.setIconSize(QtCore.QSize(30,35))
         dataButton.clicked.connect(self.goBackHome)
         dataButton.setMinimumHeight(40)
-        anotherhbox = QHBoxLayout()
-        anotherhbox.addWidget(dataButton)
-        somevbox.addLayout(anotherhbox)
+        homeButtonHorizontal.addWidget(dataButton)
 
-        self.groupBox2.setLayout(somevbox)
+        allButtonsVertical.addLayout(dataButtonsHorizontal)
+        allButtonsVertical.addLayout(homeButtonHorizontal)
+        self.buttonsScreen.setLayout(allButtonsVertical)
+    
 
+    
+        self.pageLayout.addWidget(self.checkBoxScreen)
+        self.pageLayout.addWidget(self.buttonsScreen)
 
-        
-        self.displayLayout.addWidget(self.groupBox)
-        self.displayLayout.addWidget(self.groupBox2)
-
-        self.setLayout(self.displayLayout)
+        self.setLayout(self.pageLayout)
 
     def getCheckedBoxNames(self, boxList):
         nameList = []
@@ -369,31 +433,6 @@ class visualizer (QWidget):
         self.home = Window()
 
     
-
-    
-
-
-
-
-        
-    
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-        
-
-
 myGui = QApplication(sys.argv)
 mainWindow = Window()
 sys.exit(myGui.exec()) 
