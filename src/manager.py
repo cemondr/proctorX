@@ -33,8 +33,11 @@ class manager:
 
     # ** Add a new application you want to track to the list of trackables and also into the track file (used as a database). By Default every newly added app is tracked.
     def addNewTrackable(self,newApp):
-        toBeAdded = "\nY|"+ newApp +"|0"
+        if (len(newApp)is 0):
+            return
+        toBeAdded = "Y|"+ newApp +"|0"
         self.__myReader.addNewOnTracked(toBeAdded)
+        self.__myReader.newReset(newApp)
         temp = trackable(newApp,float("0"))
         self.__toBeTracked.append(temp)
 
@@ -123,6 +126,10 @@ class manager:
                 allAppsInFile[i] = line
         self.__myReader.overWriteTrackedLines(allAppsInFile)
         self.__createTrackableObjects()
+
+        for app in self.__toBeTracked:
+            if(app.getName() == appName):
+                app.resetTotalSecond()
 
     def printAll(self):
         for x in self.__toBeTracked:

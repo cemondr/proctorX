@@ -1,4 +1,5 @@
 import os
+import datetime
 class fileInputOutput:
     __processFilePath = None
     __trackFilePath = None
@@ -30,6 +31,9 @@ class fileInputOutput:
         return data
     
     def addNewOnTracked(self,toBeAdded):
+        print(len(toBeAdded))
+        if(len(self.getAllTrackedLines())>0):
+            toBeAdded = "\n"+toBeAdded
         with open (self.__trackFilePath, "a")as myfile:
             myfile.write(toBeAdded)
     
@@ -38,10 +42,54 @@ class fileInputOutput:
             myfile.writelines(fullData)
     
     def getAllProcesses(self):
+        self.getProcesses()
         with open (self.__processFilePath, "r")as myfile:
             processes = myfile.readlines()
         
         return processes
+    
+    def newReset(self,appName):
+        if(len(appName)<1):
+            return
+        dateStr = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        allAppsInFile = self.getAllReset()        
+        for i,line in enumerate(allAppsInFile) :
+            temp = line.split("|")
+            if (temp[0] == appName):
+                line =temp[0]+"|"+dateStr+"\n"
+                allAppsInFile[i] = line
+                self.overWriteResetLines(allAppsInFile)
+                return
+        
+        if(len(allAppsInFile)!=0):
+            toBeAdded = "\n"
+        else:
+            toBeAdded =""
+        toBeAdded += appName+"|"+dateStr
+        with open("logs/resetDate.txt", "a")as myfile:
+            myfile.write(toBeAdded)
+        
+    def overWriteResetLines(self,fullData):
+        with open("logs/resetDate.txt", "w")as myfile:
+            myfile.writelines(fullData)
+    
+    def getAllReset(self):
+        with open("logs/resetDate.txt","r") as myfile:
+            resets = myfile.readlines()
+        
+        return resets
+    
+    def getResetDate(self, appName):
+        allAppsInFile = self.getAllReset()
+        for i, line in enumerate(allAppsInFile):
+            temp = line.split("|")
+            if (temp[0]==appName):
+                return temp[1]
+        
+        error = "didn't found\n"
+        num = len(allAppsInFile)
+        
+        return error
 
 
 

@@ -13,7 +13,7 @@ myReader = fileInputOutput("logs/currentProcesses.txt", "logs/currentTrackedData
 myVisualizer = trackDataVisualizer()
 
 
-class Window(QDialog):
+class Window(QWidget):
     def __init__(self):
         super().__init__()
         self.title = "ProctorX"
@@ -37,7 +37,7 @@ class Window(QDialog):
 
         self.isRunning = False
         self.groupBox = QGroupBox("Main Options")
-        #self.groupBox.setStyleSheet("border: black;")
+        self.groupBox.setStyleSheet("border: black;")
         hboxlayout = QHBoxLayout()
 
         self.runButton = QPushButton("Start",self)
@@ -104,7 +104,7 @@ class TrackedWindow(QWidget):
         self.title = "ProctorX"
         self.top = 100
         self.left = 200
-        self.width = 650
+        self.width = 850
         self.height = 550
 
         self.setWindowTitle(self.title)
@@ -120,6 +120,8 @@ class TrackedWindow(QWidget):
     
     def getTrackedData(self,port):
         currentList = myReader.getAllTrackedLines()
+        if(len(currentList)<1):
+            return
         bigString = ""
         if (port == 1):
             bigString = "NAME\n"
@@ -141,6 +143,7 @@ class TrackedWindow(QWidget):
     def reSetScreen(self):
         nameTrack = self.getTrackedData(1)
         self.displayBox1.setText(nameTrack)
+        self.setReset(nameTrack)
 
 
         statTrack = self.getTrackedData(0)
@@ -169,15 +172,29 @@ class TrackedWindow(QWidget):
         self.hboxlayout.takeAt(0)
         self.hboxlayout.takeAt(0)
         self.hboxlayout.takeAt(0)
+        self.hboxlayout.takeAt(0)
         self.hboxlayout.addWidget(self.displayProcess)
         self.dataViewButton.clicked.connect(self.pushBackTrackList)
 
 
+
  
-        self.processViewButton.setIcon(QtGui.QIcon("icons/redot.jpg"))
+        self.processViewButton.setIcon(QtGui.QIcon("icons/redot.JPG"))
         self.dataViewButton.setIcon(QtGui.QIcon("icons/target.jpg"))
         QApplication.processEvents()
     
+    def setReset(self,trackData):
+        if(len(trackData)<1):
+            return
+        tracklist = trackData.split("\n")
+     
+        self.resetname = "LAST RESET\n"
+        for each in tracklist:
+            if(len(each)>0 and each != "NAME"):
+                self.resetname += myReader.getResetDate(each)
+        
+        self.displayBox4.setText(self.resetname)
+
 
     def pushBackTrackList(self):
         self.close()
@@ -188,6 +205,11 @@ class TrackedWindow(QWidget):
         self.font = QtGui.QFont()
         self.font.setFamily("Courier")
 
+        self.displayBox4 = QTextEdit()
+        self.displayBox4.setFont(self.font)
+        self.displayBox4.setStyleSheet("color: green;")
+        self.displayBox4.setReadOnly(True)
+
 
         self.displayBox1 = QTextEdit()
         trackData = self.getTrackedData(1)
@@ -197,6 +219,8 @@ class TrackedWindow(QWidget):
         self.displayBox1.setReadOnly(True)
         self.hboxlayout.addWidget(self.displayBox1)
 
+        if(trackData):
+            self.setReset(trackData)
 
         self.displayBox0 = QTextEdit()
         trackData = self.getTrackedData(0)
@@ -213,6 +237,9 @@ class TrackedWindow(QWidget):
         self.displayBox2.setStyleSheet("color: green;")
         self.displayBox2.setReadOnly(True)
         self.hboxlayout.addWidget(self.displayBox2)
+        self.hboxlayout.addWidget(self.displayBox4)
+
+        
 
     def mainLayout(self):
 
@@ -253,8 +280,7 @@ class TrackedWindow(QWidget):
         
 
         self.editable = QLineEdit()
-        self.editable.setStyleSheet("color: green;")
-        self.editable.setStyleSheet("border: 1px solid white;")
+        self.editable.setStyleSheet("color:green; border: 1px solid white;")
         editableLayout = QHBoxLayout()
         editableLayout.addWidget(self.editable)
         vboxlayout.addLayout(editableLayout)
@@ -309,6 +335,7 @@ class TrackedWindow(QWidget):
     def callResetData(self):
         arg = self.editable.text()
         programManager.resetData(arg)
+        myReader.newReset(arg)
 
     def callTrack(self):
         arg = self.editable.text()
@@ -345,7 +372,8 @@ class visualizer (QWidget):
     def mainLayout(self):
         index = 0
         self.allcheckboxes =[]
-        self.checkBoxScreen = QGroupBox()
+        self.checkBoxScreen = QGroupBox("Check Applications you want to include in the plot")
+        self.checkBoxScreen.setStyleSheet("color: white; background-color: 221F1F")
         checkBoxVertical1 = QVBoxLayout()
         checkBoxVertical2 = QVBoxLayout()
         checkBoxHorizontalView = QHBoxLayout()
@@ -367,7 +395,7 @@ class visualizer (QWidget):
             temp.setStyleSheet("spacing:2px;")
             temp.setStyleSheet("padding-top:100;")
             temp.setIcon(QtGui.QIcon("icons/bal.jpg"))
-            temp.setStyleSheet("color:mediumvioletred;")
+            temp.setStyleSheet("background-color: blackS; color:mediumvioletred;")
             temp.setIconSize(QtCore.QSize(10,10))
             self.allcheckboxes.append(temp)
 

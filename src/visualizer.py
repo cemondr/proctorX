@@ -52,7 +52,7 @@ class trackDataVisualizer:
         self.primeForSomeData(userList)
         plt.ion()
         plt.style.use('dark_background')
-        dateStr = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        dateStr = datetime.datetime.now().strftime("%I:%M%p on %B, %Y")
         plt.text(0.07, 1.05,dateStr,fontsize=14, transform=plt.gcf().transFigure)
 
         all_colors = [k for k,v in pltcol.cnames.items()]
