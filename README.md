@@ -20,7 +20,8 @@ A software that tracks the amount of time user runs applications on a linux runn
 
 * Example Bar Chart: 
 
-![alt text](![alt text](https://i.ibb.co/Hg4WdVD/Screen-Shot-2019-08-12-at-6-49-35-PM.png)
+![alt text](https://i.ibb.co/MR2Q20h/Screen-Shot-2019-08-12-at-6-49-49-PM.png)
+
 )
 
 
