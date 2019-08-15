@@ -22,7 +22,6 @@ A software that tracks the amount of time user runs applications on a linux runn
 
 ![alt text](https://i.ibb.co/MR2Q20h/Screen-Shot-2019-08-12-at-6-49-49-PM.png)
 
-)
 
 
 
