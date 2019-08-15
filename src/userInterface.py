@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 from PyQt5.QtWidgets import * 
 import sys
 import os

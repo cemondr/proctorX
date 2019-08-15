@@ -1,0 +1,314 @@
+COMM
+/sbin/launchd
+/usr/sbin/syslogd
+/usr/libexec/UserEventAgent
+/Library/Application Support/GeoComply/PlayerLocationCheck/Application/PlayerLocationCheck
+/System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld
+/usr/libexec/kextd
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd
+/System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted
+/System/Library/CoreServices/appleeventsd
+/usr/sbin/systemstats
+/usr/libexec/configd
+/System/Library/CoreServices/powerd.bundle/powerd
+/usr/libexec/logd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+/usr/libexec/diskarbitrationd
+/System/Library/CoreServices/backupd.bundle/Contents/Resources/backupd-helper
+/usr/libexec/coreduetd
+/usr/libexec/opendirectoryd
+/System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+/System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbstated
+/System/Library/CoreServices/launchservicesd
+/usr/libexec/timed
+/usr/sbin/securityd
+/usr/libexec/locationd
+autofsd
+/usr/libexec/displaypolicyd
+/usr/libexec/dasd
+/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
+/System/Library/CoreServices/logind
+/System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+/usr/sbin/KernelEventAgent
+/usr/sbin/bluetoothd
+/usr/libexec/hidd
+/usr/libexec/corebrightnessd
+/usr/libexec/AirPlayXPCHelper
+/usr/sbin/notifyd
+/usr/sbin/distnoted
+/usr/sbin/cfprefsd
+/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/authd.xpc/Contents/MacOS/authd
+/System/Library/CoreServices/coreservicesd
+/System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored
+/System/Library/Frameworks/PCSC.framework/Versions/A/XPCServices/com.apple.ctkpcscd.xpc/Contents/MacOS/com.apple.ctkpcscd
+/usr/libexec/lsd
+/usr/libexec/trustd
+/usr/libexec/airportd
+/usr/sbin/coreaudiod
+/usr/sbin/mDNSResponder
+/usr/libexec/nsurlsessiond
+/usr/sbin/mDNSResponderHelper
+/usr/libexec/symptomsd
+/usr/libexec/syspolicyd
+/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/Support/awdd
+/usr/libexec/taskgated
+/usr/libexec/apfsd
+/System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer
+/System/Library/Frameworks/CoreMediaIO.framework/Resources/VDC.plugin/Contents/Resources/VDCAssistant
+/usr/sbin/cron
+/usr/libexec/watchdogd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer
+/System/Library/PrivateFrameworks/TCC.framework/Resources/tccd
+/System/Library/Frameworks/Security.framework/Versions/A/XPCServices/com.apple.CodeSigningHelper.xpc/Contents/MacOS/com.apple.CodeSigningHelper
+/System/Library/PrivateFrameworks/PerformanceAnalysis.framework/Versions/A/XPCServices/com.apple.PerformanceAnalysis.animationperfd.xpc/Contents/MacOS/com.apple.PerformanceAnalysis.animationperfd
+/usr/sbin/distnoted
+/System/Library/CoreServices/sharedfilelistd
+/usr/libexec/sysmond
+/usr/sbin/systemstats
+/System/Library/PrivateFrameworks/AmbientDisplay.framework/Versions/A/XPCServices/com.apple.AmbientDisplayAgent.xpc/Contents/MacOS/com.apple.AmbientDisplayAgent
+/usr/libexec/securityd_service
+/usr/sbin/cfprefsd
+/usr/libexec/UserEventAgent
+/usr/sbin/distnoted
+/System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter
+/usr/libexec/lsd
+/usr/libexec/trustd
+/System/Library/CoreServices/sharedfilelistd
+/Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+/usr/libexec/secd
+/Applications/Mail.app/Contents/MacOS/Mail
+/System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd
+/Applications/iTerm.app/Contents/MacOS/iTerm2
+/Applications/Utilities/Activity Monitor.app/Contents/MacOS/Activity Monitor
+/System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd
+/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+/System/Library/CoreServices/talagent
+/System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+/System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+/System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+/usr/libexec/pboard
+/System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd
+/System/Library/PrivateFrameworks/TCC.framework/Resources/tccd
+/usr/libexec/nsurlsessiond
+/usr/libexec/pkd
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+/System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent
+/System/Library/Frameworks/AddressBook.framework/Executables/ContactsAccountsService
+/usr/libexec/secinitd
+/System/Library/PrivateFrameworks/CloudDocsDaemon.framework/Versions/A/Support/bird
+/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.History.xpc/Contents/MacOS/com.apple.Safari.History
+/usr/libexec/nsurlstoraged
+/usr/sbin/usernoted
+/usr/sbin/wirelessproxd
+/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight
+/System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd
+/System/Library/CoreServices/Dock.app/Contents/XPCServices/com.apple.dock.extra.xpc/Contents/MacOS/com.apple.dock.extra
+/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+/usr/libexec/rapportd
+/System/Library/PrivateFrameworks/CoreWLANKit.framework/Versions/A/XPCServices/WiFiProxy.xpc/Contents/MacOS/WiFiProxy
+/usr/libexec/sharingd
+/System/Library/PrivateFrameworks/AuthKit.framework/Versions/A/Support/akd
+/usr/sbin/filecoordinationd
+/Applications/Resilio Sync.app/Contents/PlugIns/FinderExtension.appex/Contents/MacOS/FinderExtension
+/System/Library/PrivateFrameworks/CalendarAgent.framework/Executables/CalendarAgent
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/commerce
+/System/Library/CoreServices/SubmitDiagInfo
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeaccountd
+/System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+/System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+/System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent
+/usr/libexec/routined
+/System/Library/CoreServices/CrashReporterSupportHelper
+/System/Library/PrivateFrameworks/FileProvider.framework/Support/fileproviderd
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/XPCServices/com.apple.hiservices-xpcservice.xpc/Contents/MacOS/com.apple.hiservices-xpcservice
+/System/Library/CoreServices/SafariSupport.bundle/Contents/MacOS/SafariBookmarksSyncAgent
+/System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service
+/System/Library/Frameworks/InputMethodKit.framework/Resources/imklaunchagent
+/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/MacOS/PAH_Extension
+/usr/libexec/networkserviceproxy
+/System/Library/CoreServices/backgroundtaskmanagementagent
+/Applications/Resilio Sync.app/Contents/PlugIns/FinderExtension.appex/Contents/MacOS/FinderExtension
+/System/Library/PrivateFrameworks/FamilyCircle.framework/Versions/A/Resources/familycircled
+/System/Library/CoreServices/WiFiAgent.app/Contents/MacOS/WiFiAgent
+/Applications/Resilio Sync.app/Contents/MacOS/Resilio Sync
+/System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd
+/usr/libexec/knowledge-agent
+/usr/libexec/dprivacyd
+/System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService
+/System/Library/PrivateFrameworks/CoreADI.framework/adid
+/System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd
+/Applications/ExpressVPN.app/Contents/MacOS/expressvpnd
+/System/Library/CoreServices/SocialPushAgent.app/Contents/MacOS/SocialPushAgent
+/System/Library/Image Capture/Support/icdd
+/System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent
+/System/Library/CoreServices/cloudpaird
+/System/Library/PrivateFrameworks/Noticeboard.framework/Versions/A/Resources/nbagent.app/Contents/MacOS/nbagent
+/System/Library/CoreServices/diagnostics_agent
+/Applications/FTPServer.app/Contents/MacOS/FTPServer
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storelegacy
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeassetd
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking
+/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd
+/System/Library/PrivateFrameworks/CommerceKit.framework/Resources/LaterAgent.app/Contents/MacOS/LaterAgent
+/usr/sbin/distnoted
+/System/Library/CoreServices/cloudphotosd.app/Contents/MacOS/cloudphotosd
+/System/Library/PrivateFrameworks/CloudPhotoServices.framework/Versions/A/Frameworks/CloudPhotosConfigurationXPC.framework/Versions/A/XPCServices/com.apple.CloudPhotosConfiguration.xpc/Contents/MacOS/com.apple.CloudPhotosConfiguration
+/System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Support/photolibraryd
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storedownloadd
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeinstalld
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+/System/Library/Frameworks/MediaAccessibility.framework/Versions/A/XPCServices/com.apple.accessibility.mediaaccessibilityd.xpc/Contents/MacOS/com.apple.accessibility.mediaaccessibilityd
+/System/Library/CoreServices/OSDUIHelper.app/Contents/MacOS/OSDUIHelper
+/usr/libexec/assertiond
+/usr/sbin/spindump
+/System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd
+/usr/libexec/mobileassetd
+/usr/libexec/diskmanagementd
+/Applications/Resilio Sync.app/Contents/PlugIns/FinderExtension.appex/Contents/MacOS/FinderExtension
+/System/Library/CoreServices/pbs
+/System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+/usr/libexec/USBAgent
+/usr/libexec/mobileactivationd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+/System/Library/PrivateFrameworks/IMDPersistence.framework/IMAutomaticHistoryDeletionAgent.app/Contents/MacOS/IMAutomaticHistoryDeletionAgent
+/Applications/Slack.app/Contents/MacOS/Slack
+/Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper
+/Applications/Slack.app/Contents/Frameworks/Electron Framework.framework/Resources/crashpad_handler
+/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/76.0.3809.100/Helpers/chrome_crashpad_handler
+/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/76.0.3809.100/Helpers/Google Chrome Helper (GPU).app/Contents/MacOS/Google Chrome Helper (GPU)
+/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/76.0.3809.100/Helpers/Google Chrome Helper.app/Contents/MacOS/Google Chrome Helper
+/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/76.0.3809.100/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)
+/usr/libexec/PerfPowerServices
+/System/Library/CoreServices/rcd.app/Contents/MacOS/rcd
+/System/Library/PrivateFrameworks/PassKitCore.framework/passd
+/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/76.0.3809.100/Helpers/Google Chrome Helper (Renderer).app/Contents/MacOS/Google Chrome Helper (Renderer)
+/System/Library/PrivateFrameworks/DiskImages.framework/Resources/hdiejectd
+/System/Library/PrivateFrameworks/DiskImages.framework/Resources/diskimages-helper
+/Applications/Android Studio.app/Contents/MacOS/studio
+/Applications/Android Studio.app/Contents/bin/fsnotifier
+adb
+/usr/libexec/keybagd
+/System/Library/PrivateFrameworks/MessagesKit.framework/Resources/soagent.app/Contents/MacOS/soagent
+/System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+/System/Library/PrivateFrameworks/ViewBridge.framework/Versions/A/XPCServices/ViewBridgeAuxiliary.xpc/Contents/MacOS/ViewBridgeAuxiliary
+/usr/sbin/WirelessRadioManagerd
+/System/Library/PrivateFrameworks/GeoServices.framework/Versions/A/XPCServices/com.apple.geod.xpc/Contents/MacOS/com.apple.geod
+/usr/libexec/gamecontrollerd
+/System/Library/CoreServices/iconservicesagent
+/System/Library/CoreServices/iconservicesd
+/usr/libexec/nsurlstoraged
+/usr/libexec/spindump_agent
+/System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/reversetemplated
+/System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd
+/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+/System/Library/CoreServices/mapspushd
+/System/Library/CoreServices/Software Update.app/Contents/Resources/suhelperd
+/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_notify_agent
+/usr/libexec/nehelper
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/XPCServices/com.apple.CommerceKit.TransactionService.xpc/Contents/MacOS/com.apple.CommerceKit.TransactionService
+/System/Library/PrivateFrameworks/ContextKit.framework/Versions/A/XPCServices/ContextService.xpc/Contents/MacOS/ContextService
+/System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+/usr/sbin/systemsoundserverd
+/System/Library/Frameworks/AudioToolbox.framework/AudioComponentRegistrar
+/Applications/Resilio Sync.app/Contents/PlugIns/FinderExtension.appex/Contents/MacOS/FinderExtension
+/System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
+/usr/libexec/DataDetectorsSourceAccess
+/System/Library/PrivateFrameworks/CacheDelete.framework/deleted
+/usr/libexec/videosubscriptionsd
+/usr/libexec/swcd
+/System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/XPCServices/com.apple.CommerceKit.TransactionService.xpc/Contents/MacOS/com.apple.CommerceKit.TransactionService
+/System/Library/PrivateFrameworks/CloudDocsDaemon.framework/XPCServices/ContainerMetadataExtractor.xpc/Contents/MacOS/ContainerMetadataExtractor
+/System/Library/CoreServices/iconservicesagent
+/usr/libexec/trustd
+/System/Library/PrivateFrameworks/IMDPersistence.framework/XPCServices/IMDPersistenceAgent.xpc/Contents/MacOS/IMDPersistenceAgent
+/usr/libexec/amfid
+/usr/bin/ssh-agent
+/System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+/System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd
+/System/Library/Frameworks/CryptoTokenKit.framework/ctkahp.bundle/Contents/MacOS/ctkahp
+/System/Library/Frameworks/CryptoTokenKit.framework/ctkd
+/System/Library/Frameworks/CryptoTokenKit.framework/ctkd
+/System/Library/PrivateFrameworks/IMFoundation.framework/XPCServices/IMRemoteURLConnectionAgent.xpc/Contents/MacOS/IMRemoteURLConnectionAgent
+/System/Library/PrivateFrameworks/CalendarNotification.framework/Versions/A/XPCServices/CalNCService.xpc/Contents/MacOS/CalNCService
+/System/Library/Frameworks/Security.framework/Versions/A/Resources/CloudKeychainProxy.bundle/Contents/MacOS/CloudKeychainProxy
+/System/Library/CryptoTokenKit/com.apple.ifdreader.slotd/Contents/MacOS/com.apple.ifdreader
+/usr/libexec/usbd
+/System/Library/PrivateFrameworks/CoreFollowUp.framework/Versions/A/Support/followupd
+/System/Library/PrivateFrameworks/AccountPolicy.framework/XPCServices/com.apple.AccountPolicyHelper.xpc/Contents/MacOS/com.apple.AccountPolicyHelper
+/usr/libexec/SafariCloudHistoryPushAgent
+/System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstoreagent
+/usr/libexec/AssetCache/AssetCache
+/System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell
+/usr/libexec/keyboardservicesd
+/usr/libexec/adprivacyd
+/System/Library/PrivateFrameworks/CoreRecents.framework/Versions/A/Support/recentsd
+/System/Library/CoreServices/EscrowSecurityAlert.app/Contents/MacOS/EscrowSecurityAlert
+/System/Library/PrivateFrameworks/CloudServices.framework/Versions/A/XPCServices/com.apple.sbd.xpc/Contents/MacOS/com.apple.sbd
+/System/Library/PrivateFrameworks/CoreCDP.framework/Versions/A/Resources/cdpd
+/usr/libexec/smd
+/usr/libexec/sandboxd
+/System/Library/CoreServices/ReportCrash
+/Applications/Slack.app/Contents/Frameworks/Slack Helper.app/Contents/MacOS/Slack Helper
+/System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd
+/Applications/Safari.app/Contents/MacOS/Safari
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Networking.xpc/Contents/MacOS/com.apple.WebKit.Networking
+/Applications/Safari.app/Contents/XPCServices/com.apple.Safari.SandboxBroker.xpc/Contents/MacOS/com.apple.Safari.SandboxBroker
+/usr/libexec/webinspectord
+/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.ImageDecoder.xpc/Contents/MacOS/com.apple.Safari.ImageDecoder
+/System/Library/PrivateFrameworks/SafariShared.framework/Versions/A/XPCServices/com.apple.Safari.SearchHelper.xpc/Contents/MacOS/com.apple.Safari.SearchHelper
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.Storage.xpc/Contents/MacOS/com.apple.WebKit.Storage
+/System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+/System/Library/Frameworks/Metal.framework/Versions/A/XPCServices/MTLCompilerService.xpc/Contents/MacOS/MTLCompilerService
+/System/Library/PrivateFrameworks/ProtectedCloudStorage.framework/Helpers/ProtectedCloudKeySyncing
+/usr/libexec/periodic-wrapper
+/usr/libexec/silhouette
+/System/Library/PrivateFrameworks/QuickLookThumbnailing.framework/Support/com.apple.quicklook.ThumbnailsAgent
+/usr/libexec/rtcreportingd
+/System/Library/PrivateFrameworks/PhotoLibraryPrivate.framework/Versions/A/Frameworks/PhotoLibraryServices.framework/Versions/A/XPCServices/com.apple.photomodel.xpc/Contents/MacOS/com.apple.photomodel
+/usr/bin/sysdiagnose
+/System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/XPCServices/media-indexer.xpc/Contents/MacOS/media-indexer
+/System/Library/Frameworks/iTunesLibrary.framework/Versions/A/XPCServices/com.apple.iTunesLibraryService.xpc/Contents/MacOS/com.apple.iTunesLibraryService
+aslmanager
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/atsd
+/System/Library/PrivateFrameworks/AssetCacheServices.framework/Versions/A/XPCServices/AssetCacheLocatorService.xpc/Contents/MacOS/AssetCacheLocatorService
+/System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdate_download_service
+/System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/usr/sbin/netbiosd
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/MacOS/Electron
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Resources/crashpad_handler
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/Applications/Resilio Sync.app/Contents/PlugIns/FinderExtension.appex/Contents/MacOS/FinderExtension
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/CoreServices/ScopedBookmarkAgent
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/private/var/folders/q3/0ch6nb8s08759d_53mvpjcgw0000gn/T/AppTranslocation/D2628075-5C1E-47C1-A83D-1ECD26A803F5/d/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker_shared
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/AudioToolbox.framework/XPCServices/com.apple.audio.SandboxHelper.xpc/Contents/MacOS/com.apple.audio.SandboxHelper
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/System/Library/Frameworks/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+/bin/bash
+/usr/local/Cellar/python/3.7.3/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python
+sh
+ps
+/bin/bash
