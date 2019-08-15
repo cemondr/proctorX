@@ -15,10 +15,12 @@ proctorX, Copyright(c) 2019, Cem Önder
 PyPi package builder is currently in Progress. 
 For the time being in order to build proctorX you need to complete the following steps:
 
-pip3 install numpy
-pip3 install matplotlib
-pip3 install PyQt5
+`pip3 install numpy`
+
+`pip3 install matplotlib`
+
+`pip3 install PyQt5`
 
 after cloning the steps the program can be executable with:
 
-python3 src/userInterface.py
+`python3 src/userInterface.py`
